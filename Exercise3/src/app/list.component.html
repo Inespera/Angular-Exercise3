@@ -1,0 +1,22 @@
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Amount</th>
+      <th>Balance</th>
+      <th>Label</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let transaction of transactions">
+      <td>
+        <a [routerLink]="['/detail', transaction.id]">{{ transaction.id }}</a>
+      </td>
+      <td>{{ transaction.amount }}</td>
+      <td>{{ transaction.balance }}</td>
+      <td>{{ transaction.label }}</td>
+      <td>{{ transaction.date | date: 'medium' }}</td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,10 @@
+<div *ngIf="transaction">
+    <h2>Transaction Detail</h2>
+    <ul>
+      <li><strong>ID:</strong> {{ transaction.id }}</li>
+      <li><strong>Amount:</strong> {{ transaction.amount }}</li>
+      <li><strong>Balance:</strong> {{ transaction.balance }}</li>
+      <li><strong>Label:</strong> {{ transaction.label }}</li>
+      <li><strong>Date:</strong> {{ transaction.date | date: 'medium' }}</li>
+    </ul>
+  </div>
